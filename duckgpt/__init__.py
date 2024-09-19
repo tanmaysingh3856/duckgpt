@@ -1,8 +1,7 @@
 import json
 import requests
 from typing import List, Dict
-from googlesearch import get_random_user_agent
-
+from fake_useragent import UserAgent
 
 class DuckGPT:
     """
@@ -10,7 +9,6 @@ class DuckGPT:
     Get list of models >> Client.Models() -> list
     Chat using history >> Client.Chat(str, List[Dict[str, str]]) -> str
     """
-
     def __init__(self, model="gpt-4o-mini"):
         self.version = 'v1.0'
         self.model = model
@@ -19,8 +17,9 @@ class DuckGPT:
         self.status_url = 'https://duckduckgo.com/duckchat/v1/status'
         self.chat_api = 'https://duckduckgo.com/duckchat/v1/chat'
 
+        ua = UserAgent()
         self.headers = {
-            'User-Agent': get_random_user_agent().decode('utf-8'),
+            'User-Agent': ua.random,
             'Accept': '*/*',
             'Accept-Language': 'en-US,en;q=0.5',
             'Accept-Encoding': 'gzip, deflate, br, zstd',

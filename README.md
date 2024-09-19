@@ -5,7 +5,7 @@ DuckGPT is a Python client for interacting with the DuckGPT API.
 ## Installation
 
 ```bash
-pip install duckgpt
+pip3 install duckgpt
 ```
 
 ## Usage

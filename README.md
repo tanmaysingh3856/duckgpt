@@ -1,23 +1,38 @@
-# DuckGPT
+# 🦆 DuckGPT
 
-DuckGPT is a Python client for interacting with the DuckGPT.
+**DuckGPT** is a Python client for interacting with the DuckGPT model, providing seamless integration and easy-to-use functionalities.
 
-## Installation
+## 🚀 Features
+
+- **Easy Installation**: Quickly set up DuckGPT with a single command.
+- **Simple API**: Intuitive methods to interact with the model.
+- **Flexible**: Supports various models, including `gpt-4o-mini`.
+
+## 📦 Installation
+
+Install DuckGPT using `pip`:
 
 ```bash
 pip3 install duckgpt
 ```
 
-## Usage
-
+## 💡 Usage
+Here's a quick example to get you started:
+    
 ```python
 from duckgpt import DuckGPT
 
+# Initialize the client with the desired model
 client = DuckGPT(model="gpt-4o-mini")
+
+# Fetch available models
 models = client.Models()
+
+# Interact with the model
 response = client.Chat("Hello, world!", [])
 print(response)
 ```
 
-## Owner
-[Tanmay Singh](https://github.com/tanmaysingh3856)
+## 🧑‍💻 Author
+
+GitHub - [Tanmay Singh](https://github.com/tanmaysingh3856)

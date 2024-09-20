@@ -1,6 +1,6 @@
 # DuckGPT
 
-DuckGPT is a Python client for interacting with the DuckGPT API.
+DuckGPT is a Python client for interacting with the DuckGPT.
 
 ## Installation
 
@@ -18,3 +18,6 @@ models = client.Models()
 response = client.Chat("Hello, world!", [])
 print(response)
 ```
+
+## Owner
+[Tanmay Singh](https://github.com/tanmaysingh3856)

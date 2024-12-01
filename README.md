@@ -32,7 +32,3 @@ models = client.Models()
 response = client.Chat("Hello, world!", [])
 print(response)
 ```
-
-## 🧑‍💻 Author
-
-GitHub - [Tanmay Singh](https://github.com/tanmaysingh3856)

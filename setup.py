@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='duckgpt',
-    version='1.0.2',
+    version='1.0.3',
     author='github.com/tanmaysingh3856',
     description='A Python client for DuckGPT',
     long_description=open('README.md').read(),

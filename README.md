@@ -7,6 +7,7 @@
 - **Easy Installation**: Quickly set up DuckGPT with a single command.
 - **Simple API**: Intuitive methods to interact with the model.
 - **Flexible**: Supports various models, including `gpt-4o-mini`.
+- **Supports multiple languages**: Now you can receive responses in languages other than english `gpt-4o-mini`.
 
 ## 📦 Installation
 
@@ -29,6 +30,6 @@ client = DuckGPT(model="gpt-4o-mini")
 models = client.Models()
 
 # Interact with the model
-response = client.Chat("Hello, world!", [])
+response = client.Chat("Hello, world! 你好世界！ ", [])
 print(response)
 ```

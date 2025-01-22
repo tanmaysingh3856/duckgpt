@@ -73,9 +73,10 @@ class DuckGPT:
             try:
                 messages = [
                     json.loads(line.split("data: ")[1])['message']
-                    for line in response.text.splitlines()
+                    for line in response.content.decode('utf8').split('\n')
                     if 'message' in line
                 ]
+
                 return ''.join(messages)
             except (json.JSONDecodeError, KeyError) as e:
                 raise self.OperationError(f"Chat(): Error parsing response - {str(e)}")

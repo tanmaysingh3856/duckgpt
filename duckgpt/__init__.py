@@ -67,7 +67,6 @@ class DuckGPT:
         }
         self.headers["x-vqd-4"] = self.GetVQD()
         self.headers["Content-Type"] = "application/json"
-
         response = requests.post(self.chat_api, headers=self.headers, json=data)
         if response.status_code == 200:
             try:
@@ -76,7 +75,6 @@ class DuckGPT:
                     for line in response.content.decode('utf8').split('\n')
                     if 'message' in line
                 ]
-
                 return ''.join(messages)
             except (json.JSONDecodeError, KeyError) as e:
                 raise self.OperationError(f"Chat(): Error parsing response - {str(e)}")
